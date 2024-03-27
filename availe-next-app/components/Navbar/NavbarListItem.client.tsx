@@ -3,12 +3,16 @@ import Link from 'next/link';
 interface NavbarListItemProps {
     href: string
     text: string
+    isMobileMenu?: boolean;
+    onItemClick?: () => void;
 }
 
-const NavbarListItem = ({ href, text }: NavbarListItemProps) => {
+const NavbarListItem = ({ href, text, isMobileMenu, onItemClick }: NavbarListItemProps) => {
+    const itemClass = isMobileMenu ? "ml-0 uppercase text-xl" : "ml-10 uppercase hover:border-b text-xl";
+
     return (
         <Link href={href}>
-            <li className="ml-10 uppercase hover:border-b text-xl">{text}</li>
+            <li className={itemClass} onClick={onItemClick}>{text}</li>
         </Link>
     )
 }

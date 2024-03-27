@@ -11,6 +11,12 @@ const Navbar = () => {
     const [isNavOpen, setIsNavOpen] = useState(false)
     const handleNav = () => setIsNavOpen(!isNavOpen)
 
+    const menuClasses = `fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-[#ecf0f3] p-10 
+                         transform ${isNavOpen ? "translate-x-0" : "-translate-x-full"} 
+                         transition-transform duration-500 ease-in-out`
+    const closeIconClasses = `absolute top-6 right-4 transition-opacity duration-0 ease-in-out ${isNavOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`;
+
+
     return (
         <nav className="fixed w-full h-24 shadow-xl bg-white">
             <div className="flex justify-between items-center h-full w-full px-4 2xl:px-16">
@@ -26,21 +32,21 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div onClick={handleNav} className="sm:hidden cursor-pointer pl-24">
-                    {isNavOpen ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
+                    <AiOutlineMenu size={25} />
                 </div>
             </div>
-
-            {isNavOpen && (
-                <div className="fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-[#ecf0f3] p-10 ease-in duration-500">
-                    <ul className="md:hidden">
-                        <NavbarListItem href="/about" text="Data Science" />
-                        <NavbarListItem href="/about" text="Games" />
-                        <NavbarListItem href="/about" text="About" />
-                        <NavbarListItem href="/contact" text="Contact" />
-                    </ul>
+            <div className={menuClasses}>
+                <div className={closeIconClasses} onClick={handleNav}>
+                    {isNavOpen ? <AiOutlineClose size={25} /> : null}
                 </div>
-            )}
-        </nav>
+                <ul className="flex flex-col gap-y-4 py-4">
+                    <NavbarListItem href="/about" text="Data Science" />
+                    <NavbarListItem href="/about" text="Games" />
+                    <NavbarListItem href="/about" text="About" />
+                    <NavbarListItem href="/contact" text="Contact" />
+                </ul>
+            </div>
+        </nav >
     )
 }
 
