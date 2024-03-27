@@ -26,7 +26,7 @@ const Navbar = () => {
                 <div>
                     <ul className="hidden sm:flex">
                         <NavbarListItem href="/about" text="Data Science" />
-                        <NavbarListItem href="/about" text="Games" />
+                        <NavbarListItem href="/about" text="Game Dev" />
                         <NavbarListItem href="/about" text="About" />
                         <NavbarListItem href="/contact" text="Contact" />
                     </ul>
@@ -41,7 +41,7 @@ const Navbar = () => {
                 </div>
                 <ul className="flex flex-col gap-y-4 py-4">
                     <NavbarListItem href="/about" text="Data Science" />
-                    <NavbarListItem href="/about" text="Games" />
+                    <NavbarListItem href="/about" text="Game Dev" />
                     <NavbarListItem href="/about" text="About" />
                     <NavbarListItem href="/contact" text="Contact" />
                 </ul>
