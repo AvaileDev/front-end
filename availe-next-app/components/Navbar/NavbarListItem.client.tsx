@@ -8,7 +8,7 @@ interface NavbarListItemProps {
 }
 
 const NavbarListItem = ({ href, text, isMobileMenu, onItemClick }: NavbarListItemProps) => {
-    const itemClass = isMobileMenu ? "ml-0 uppercase text-xl" : "ml-10 uppercase hover:border-b text-xl";
+    const itemClass = isMobileMenu ? "ml-0 text-xl" : "ml-10 hover:border-b text-xl";
 
     return (
         <Link href={href}>

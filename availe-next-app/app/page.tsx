@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FiArrowDown } from "react-icons/fi";
+import { FiChevronDown } from "react-icons/fi";
 
 export default function Home() {
   const handleScrollToSection = (id: string) => {
@@ -21,7 +21,7 @@ export default function Home() {
               <h1 className="text-5xl font-bold text-center text-white">
                 Hello! I'm <span className="text-teal-200">Rafael Diaz</span> <br />a software developer</h1>
             </div>
-            <FiArrowDown
+            <FiChevronDown
               className="text-white text-4xl cursor-pointer"
               onClick={() => handleScrollToSection('about-section')}
             />
