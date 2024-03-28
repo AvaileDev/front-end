@@ -3,6 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FiChevronDown } from "react-icons/fi";
+import { SiCplusplus, SiPython, SiTypescript, SiWireshark } from "react-icons/si";
+import { FaJava, FaAws, FaReact, FaDocker, FaLinux } from "react-icons/fa6";
+import { GoGear } from "react-icons/go";
+import { PiFileSqlLight } from "react-icons/pi";
+import { CiServer } from "react-icons/ci";
 
 export default function Home() {
   const handleScrollToSection = (id: string) => {
@@ -12,15 +17,37 @@ export default function Home() {
     }
   };
 
+  const technologies_dict = [
+    { name: 'Python', Icon: SiPython },
+    { name: 'C++', Icon: SiCplusplus },
+    { name: 'Java', Icon: FaJava },
+    { name: 'TypeScript', Icon: SiTypescript },
+    { name: 'AWS', Icon: FaAws },
+    { name: 'React', Icon: FaReact },
+    { name: 'Jenkins', Icon: GoGear },
+    { name: 'Docker', Icon: FaDocker },
+    { name: 'Wireshark', Icon: SiWireshark },
+    { name: 'SQL', Icon: PiFileSqlLight },
+    { name: 'Linux', Icon: CiServer },
+  ];
+
   return (
     <main className="flex justify-between flex-row min-h-screen bg-blue-400">
-      <div className="flex flex-col justify-center flex-grow text-center items-center mb-64">
+      <div className="flex flex-col justify-center flex-grow text-center items-center gap-12">
         <div className="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg">
           <h1 className="font-medium text-white">
             <span className="text-2xl">Hello, I'm</span> <br />
             <span className="text-6xl">Rafael Diaz</span> <br />
             <span className="text-3xl">a software developer</span>
           </h1>
+        </div>
+        <div className="grid grid-cols-4 gap-4">
+          {technologies_dict.map((tech, index) => (
+            <div key={index} className="flex flex-col items-center">
+              <tech.Icon className="text-white text-4xl" />
+              <span className="text-white text-lg">{tech.name}</span>
+            </div>
+          ))}
         </div>
         <FiChevronDown
           className="text-white text-4xl cursor-pointer mt-5"
