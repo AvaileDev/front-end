@@ -4,10 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { FiChevronDown } from "react-icons/fi";
 import { SiCplusplus, SiPython, SiTypescript, SiWireshark } from "react-icons/si";
-import { FaJava, FaAws, FaReact, FaDocker, FaLinux } from "react-icons/fa6";
+import { FaJava, FaAws, FaReact, FaDocker } from "react-icons/fa6";
 import { GoGear } from "react-icons/go";
 import { PiFileSqlLight } from "react-icons/pi";
 import { CiServer } from "react-icons/ci";
+import { TbBrandNextjs } from "react-icons/tb";
 
 export default function Home() {
   const handleScrollToSection = (id: string) => {
@@ -18,17 +19,25 @@ export default function Home() {
   };
 
   const technologies_dict = [
+    // Programming Languages
     { name: 'Python', Icon: SiPython },
     { name: 'C++', Icon: SiCplusplus },
     { name: 'Java', Icon: FaJava },
     { name: 'TypeScript', Icon: SiTypescript },
-    { name: 'AWS', Icon: FaAws },
+
+    // Frontend Technologies
     { name: 'React', Icon: FaReact },
-    { name: 'Jenkins', Icon: GoGear },
-    { name: 'Docker', Icon: FaDocker },
-    { name: 'Wireshark', Icon: SiWireshark },
-    { name: 'SQL', Icon: PiFileSqlLight },
+    { name: 'Next.js', Icon: TbBrandNextjs },
+
+    // Backend and Infrastructure
+    { name: 'AWS', Icon: FaAws },
     { name: 'Linux', Icon: CiServer },
+    { name: 'Docker', Icon: FaDocker },
+
+    // Development Tools and Databases
+    { name: 'Jenkins', Icon: GoGear },
+    { name: 'SQL', Icon: PiFileSqlLight },
+    { name: 'Wireshark', Icon: SiWireshark },
   ];
 
   return (
