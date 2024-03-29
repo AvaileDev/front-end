@@ -54,10 +54,8 @@ const HomeMain = () => {
                     className="text-white text-4xl cursor-pointer mt-5"
                     onClick={() => scrollToSection('about-section')} />
             </div>
-            <div className="flex flex-col flex-grow p-10">
-                <div className="relative w-full h-full">
-                    <img src="/vercel.svg" alt="Vercel Logo" style={{ objectFit: 'contain' }} />
-                </div>
+            <div className="flex flex-col flex-grow p-10 justify-center">
+                <img src="/vercel.svg" alt="Vercel Logo" style={{ objectFit: 'contain' }} />
             </div>
         </main>
     )
