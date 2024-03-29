@@ -8,6 +8,7 @@ import { PiFileSqlLight } from 'react-icons/pi';
 import { SiCplusplus, SiWireshark } from 'react-icons/si';
 import { TbBrandPython, TbBrandTypescript, TbBrandNextjs } from 'react-icons/tb';
 import { scrollToSection } from '@/utils/scrollToSection';
+import Link from 'next/link';
 
 const HomeMain = () => {
     const technologies_dict = [
@@ -35,13 +36,15 @@ const HomeMain = () => {
     return (
         <main className="flex justify-between flex-row min-h-screen bg-indigo-400">
             <div className="flex flex-col justify-center flex-grow text-center items-center gap-12">
-                <div className="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg">
-                    <h1 className="font-medium text-white">
-                        <span className="text-2xl">Hello, I'm</span> <br />
-                        <span className="text-6xl">Rafael Diaz</span> <br />
-                        <span className="text-3xl">a software developer</span>
-                    </h1>
-                </div>
+                <Link href="/about" passHref>
+                    <div className="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg cursor-pointer transition duration-300 ease-in-out hover:bg-opacity-25 hover:shadow-xl hover:scale-105">
+                        <h1 className="font-medium text-white">
+                            <span className="text-2xl">Hello, I'm</span> <br />
+                            <span className="text-6xl">Rafael Diaz</span> <br />
+                            <span className="text-3xl">a software developer</span>
+                        </h1>
+                    </div>
+                </Link>
                 <div className="grid grid-cols-4 gap-4">
                     {technologies_dict.map((tech, index) => (
                         <div key={index} className="flex flex-col items-center">
