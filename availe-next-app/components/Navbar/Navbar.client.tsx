@@ -5,11 +5,12 @@ import Link from "next/link"
 import NavbarListItem from "./NavbarListItem.client"
 import Logo from "@/public/vercel.svg"
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 const Navbar = () => {
     const [isNavOpen, setIsNavOpen] = useState(false)
     const handleNav = () => setIsNavOpen(!isNavOpen)
+    const navRef = useRef<HTMLDivElement>(null);
 
     const menuClasses = `fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-[#ecf0f3] p-10 
                          transform ${isNavOpen ? "translate-x-0" : "-translate-x-full"} 
