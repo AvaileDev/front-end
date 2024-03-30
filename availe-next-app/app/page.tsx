@@ -13,10 +13,8 @@ export default function Home() {
             I am a computer science student that specializes in web development and Linux systems.
             <br />While my main focus lie on those two areas, I also love exploring other areas of computer science.
           </p>
-          <p className="text-start">Below are select projects that I have worked on:</p>
+          <p>Below are select projects that I have worked on:</p>
         </div>
-        <h2 className="text-black text-3xl">Projects</h2>
-
       </div>
     </>
   );
