@@ -1,5 +1,3 @@
-import { Main } from 'next/document';
-import React from 'react'
 import { CiServer } from 'react-icons/ci';
 import { FaJava, FaReact, FaAws, FaDocker } from 'react-icons/fa6';
 import { FiChevronDown } from 'react-icons/fi';
