@@ -39,7 +39,7 @@ const HomeMain = () => {
     return (
         <main className="flex justify-evenly flex-col min-h-screen bg-indigo-400">
             <div className="flex flex-row">
-                <div className="flex flex-col flex-1 justify-center flex-grow text-center items-center gap-12 pointer-events-none sm:pointer-events-auto">
+                <div className="flex flex-col w-3/5 justify-center flex-grow text-center items-center gap-12 pointer-events-none sm:pointer-events-auto">
                     <Link href="/about" passHref>
                         <div className="md:bg-white md:bg-opacity-20 p-6 md:rounded-lg md:shadow-lg md:cursor-pointer transition duration-300 ease-in-out hover:bg-opacity-25 hover:shadow-xl hover:scale-105">
                             <h1 className="font-medium text-white">
@@ -58,15 +58,21 @@ const HomeMain = () => {
                         ))}
                     </div>
                 </div>
-                <div className="flex-col flex-grow flex-1 p-10 justify-center hidden md:flex">
-                    <Image
-                        src="/render.webp"
-                        alt="Vercel Logo"
-                        width="3"
-                        height="2"
-                        layout="responsive"
-                        style={{ objectFit: "contain" }}
-                    />
+                <div className="flex-col flex-grow w-2/5 p-10 hidden md:flex">
+                    <h1 className="text-white text-2xl text-center mb-5">Featured Project</h1>
+                    <Link href="/about" passHref>
+                        <div className="flex flex-col justify-center cursor-pointer transition duration-300 ease-in-out transform hover:scale-105">
+                            <Image
+                                src="/render.webp"
+                                alt="Vercel Logo"
+                                width="3"
+                                height="2"
+                                layout="responsive"
+                                style={{ objectFit: "contain" }}
+                            />
+                            <span className="text-center text-white mt-8">Expense Tracker, built with JavaFX and SQLite</span>
+                        </div>
+                    </Link>
                 </div>
             </div>
             <FiChevronDown
