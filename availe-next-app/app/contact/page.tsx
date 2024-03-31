@@ -4,8 +4,8 @@ export default function Contact() {
 
   return (
     <div className="flex items-center justify-center min-h-screen">
-      <form className="flex flex-col gap-4 relative m:border m:rounded w-3/5">
-        <h2 className="text-lg">Contact Form</h2>
+      <form className="flex flex-col gap-4 relative w-3/5">
+        <h2 className="text-lg text-center">Contact Form (Not Functional Yet)</h2>
         <label htmlFor="Email" className={labelClass}>Email</label>
         <input
           type="email"
