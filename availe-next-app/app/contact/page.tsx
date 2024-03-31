@@ -1,39 +1,12 @@
 export default function Contact() {
+    const inputClass = "border border-gray-300 w-3/5"
+
     return (
-        <form className="flex flex-col w-1/2 mx-auto">
-            <div className="flex flex-row justify-evenly">
-                <div className="flex flex-col">
-                    <label htmlFor="firstName">First Name</label>
-                    <input
-                        type="text"
-                        id="firstName"
-                        className="border-b border-black bg-transparent"
-                    />
-                </div>
-                <div className="flex flex-col">
-                    <label htmlFor="name">Last Name</label>
-                    <input
-                        type="text"
-                        id="lastName"
-                        className="border-b border-black bg-transparent"
-                    />
-                </div>
-            </div>
-            <label htmlFor="email">Email:</label>
-            <input
-                type="email"
-                id="email"
-                className="border-b border-black bg-transparent"
-            />
-            <label htmlFor="Subject">Subject:</label>
-            <input
-                type="text"
-                id="subject"
-            />
-            <label htmlFor="message">Message:</label>
-            <textarea
-                id="message"
-            />
+        <form className="flex flex-col gap-4 mb-8 items-center">
+            <h2 className="text-lg">Contact Form</h2>
+            <input type="email" name="Email" placeholder="Email" className={inputClass} />
+            <textarea name="Message" rows={14} placeholder="Message" className={inputClass} />
+            <button type="submit" className="w-1/5 self-center bg-blue-500 hover::bg-blue-700 text-white font-medium py-2 rounded">Submit</button>
         </form>
     )
 }
