@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import NavbarListItem from "./NavbarListItem.client"
+import NavbarListItem from "./NavbarListItem"
 import Logo from "@/public/vercel.svg"
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"
 import { useEffect, useRef, useState } from "react"
