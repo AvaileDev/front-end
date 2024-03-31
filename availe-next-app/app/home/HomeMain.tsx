@@ -39,7 +39,7 @@ const HomeMain = () => {
     return (
         <main className="flex justify-evenly flex-col min-h-screen bg-indigo-400">
             <div className="flex flex-row">
-                <div className="flex flex-col justify-center flex-grow text-center items-center gap-12 pointer-events-none sm:pointer-events-auto">
+                <div className="flex flex-col flex-1 justify-center flex-grow text-center items-center gap-12 pointer-events-none sm:pointer-events-auto">
                     <Link href="/about" passHref>
                         <div className="md:bg-white md:bg-opacity-20 p-6 md:rounded-lg md:shadow-lg md:cursor-pointer transition duration-300 ease-in-out hover:bg-opacity-25 hover:shadow-xl hover:scale-105">
                             <h1 className="font-medium text-white">
@@ -58,9 +58,9 @@ const HomeMain = () => {
                         ))}
                     </div>
                 </div>
-                <div className="flex-col flex-grow p-10 justify-center hidden md:flex">
+                <div className="flex-col flex-grow flex-1 p-10 justify-center hidden md:flex">
                     <Image
-                        src="/vercel.svg"
+                        src="/render.webp"
                         alt="Vercel Logo"
                         width="3"
                         height="2"
@@ -73,7 +73,7 @@ const HomeMain = () => {
                 className="text-white text-4xl cursor-pointer self-center"
                 onClick={() => scrollToSection("about-section")}
             />
-        </main >
+        </main>
     );
 };
 
