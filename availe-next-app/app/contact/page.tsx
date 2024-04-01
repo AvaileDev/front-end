@@ -6,9 +6,7 @@ export default function Contact() {
   return (
     <div className="flex justify-center min-h-screen">
       <form className="flex flex-col gap-6 relative w-3/5">
-        <h2 className="text-lg text-center">
-          Contact Form
-        </h2>
+        <h2 className="text-lg text-center">Contact Form</h2>
         <label htmlFor="Email" className={labelClass}>
           Email
         </label>
