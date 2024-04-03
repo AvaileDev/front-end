@@ -80,7 +80,7 @@ const HomeMain = () => {
         </div>
       </div>
       <FiChevronDown
-        className="text-white text-4xl cursor-pointer self-center"
+        className="text-white text-4xl self-center"
         onClick={() => scrollToSection("about-section")}
       />
     </div>
