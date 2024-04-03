@@ -28,9 +28,11 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 w-full bg-white z-10">
       <div className="flex justify-between items-center h-full w-full px-4 2xl:px-16">
-        <Link href="/">
-          <Image src={Logo} alt="Logo" width={205} height={75} />
-        </Link>
+        <div className={`transition-opacity duration-300 ease-in-out relative ${isNavOpen ? 'opacity-0' : 'opacity-100'}`}>
+          <Link href="/">
+            <Image src={Logo} alt="Logo" width={205} height={75} />
+          </Link>
+        </div>
         <div>
           <ul className="hidden sm:flex mr-1">
             {nav_dict.map(({ href, text }, index) => (
@@ -39,20 +41,10 @@ const Navbar = () => {
           </ul>
         </div>
         <div onClick={handleNav} className="sm:hidden pl-24">
-          <HiMenuAlt4 size={25} />
+          {isNavOpen ? <AiOutlineClose size={25} /> : <HiMenuAlt4 size={25} />}
         </div>
       </div>
-      {/* <div className={menuClasses}>
-        <div className={closeIconClasses} onClick={handleNav}>
-          {isNavOpen ? <AiOutlineClose size={25} /> : null}
-        </div>
-        <ul className="flex flex-col gap-y-4 py-4">
-          {nav_dict.map(({ href, text }, index) => (
-            <NavbarListItem key={index} href={href} text={text} />
-          ))}
-        </ul>
-      </div> */}
-    </nav>
+    </nav >
   );
 };
 
