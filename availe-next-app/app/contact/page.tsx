@@ -10,15 +10,15 @@ export default function Contact() {
         <label htmlFor="Email" className={labelClass}>
           Email
         </label>
-        <input type="email" name="Email" className={inputClass} />
+        <input type="email" name="Email" className={inputClass} autoComplete="email" />
         <label htmlFor="Subject" className={labelClass}>
           Subject
         </label>
-        <input type="text" name="Subject" className={inputClass} />
+        <input type="text" name="Subject" className={inputClass} autoComplete="off" />
         <label htmlFor="Message" className={labelClass}>
           Message
         </label>
-        <textarea name="Message" rows={14} className={inputClass} />
+        <textarea name="Message" rows={14} className={inputClass} autoComplete="off" />
         <button
           type="submit"
           className="w-full md:w-2/5 self-center bg-blue-500 text-white font-medium py-2 rounded hover:brightness-95"
