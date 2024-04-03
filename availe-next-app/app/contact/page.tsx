@@ -4,8 +4,8 @@ export default function Contact() {
   const labelClass = "text-left block text-gray-600 text-sm font-medium mb-2";
 
   return (
-    <div className="flex justify-center min-h-screen">
-      <form className="flex flex-col gap-6 relative w-3/5">
+    <div className="w-full">
+      <form className="flex flex-col gap-6 w-3/5 mx-auto">
         <h2 className="text-lg text-center">Contact Form</h2>
         <label htmlFor="Email" className={labelClass}>
           Email
@@ -21,7 +21,7 @@ export default function Contact() {
         <textarea name="Message" rows={14} className={inputClass} />
         <button
           type="submit"
-          className="w-1/5 self-center bg-blue-500 text-white font-medium py-2 rounded hover:brightness-95"
+          className="w-full md:w-2/5 self-center bg-blue-500 text-white font-medium py-2 rounded hover:brightness-95"
         >
           Submit
         </button>

@@ -1,6 +1,6 @@
 "use client";
 
-import HomeMain from "./home/HomeMain";
+import HomeMain from "./home/Hero";
 
 export default function Home() {
   return (

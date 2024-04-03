@@ -37,7 +37,7 @@ const HomeMain = () => {
   ];
 
   return (
-    <main className="flex justify-evenly flex-col min-h-screen bg-indigo-400">
+    <div className="flex justify-evenly flex-col min-h-screen bg-indigo-400">
       <div className="flex flex-row">
         <div className="flex flex-col w-3/5 justify-center flex-grow text-center items-center gap-12 pointer-events-none sm:pointer-events-auto">
           <Link href="/about" passHref>
@@ -83,7 +83,7 @@ const HomeMain = () => {
         className="text-white text-4xl cursor-pointer self-center"
         onClick={() => scrollToSection("about-section")}
       />
-    </main>
+    </div>
   );
 };
 
