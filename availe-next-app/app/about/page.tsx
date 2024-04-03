@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="min-h-screen-minus-footer mx-auto px-10 max-w-xl flex flex-col gap-10">
+    <div className="min-h-screen-minus-footer mx-auto px-10 max-w-xl flex flex-col gap-5">
       <h1 className="text-2xl font-semibold">About Me</h1>
       <p>
         Hello! I&apos;m a senior computer science student who&apos;s deeply
