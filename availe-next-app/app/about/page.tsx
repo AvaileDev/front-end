@@ -18,7 +18,6 @@ export default function About() {
           <li>Back-end: NextJS</li>
           <li>CI/CD: Jenkins, Docker</li>
           <li>Hosting: EC2 AWS</li>
-          <li>Polyfills: Smoothscroll</li>
         </ul>
 
         <p className="border-t border-gray-300 pt-6">
