@@ -3,7 +3,12 @@ export default function About() {
     <div className="min-h-screen-minus-footer mx-auto px-10 max-w-xl flex flex-col gap-10">
       <h1 className="text-2xl font-semibold">About Me</h1>
       <p>
-        Hello! I'm a senior computer science student who's deeply passionate about all things CS-related. I have real-world experience operating Linux systems in an internship environment, and I have taken elective courses in microcontrollers and network protocols. In the upcoming semester, I will also be taking an elective in digital signal processing.
+        Hello! I&apos;m a senior computer science student who&apos;s deeply
+        passionate about all things CS-related. I have real-world experience
+        operating Linux systems in an internship environment, and I have taken
+        elective courses in microcontrollers and network protocols. In the
+        upcoming semester, I will also be taking an elective in digital signal
+        processing.
       </p>
 
       <div className="flex flex-col gap-4">
@@ -16,7 +21,8 @@ export default function About() {
         </ul>
 
         <p className="border-t border-gray-300 pt-6">
-          Note that this website is a work in progress. I'm currently focusing on remastering projects in a web-deployable format.
+          Note that this website is a work in progress. I&apos;m currently
+          focusing on remastering projects in a web-deployable format.
         </p>
       </div>
     </div>
