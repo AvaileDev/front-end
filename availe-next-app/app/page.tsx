@@ -1,11 +1,11 @@
 "use client";
 
-import HomeMain from "./home/Hero";
+import Hero from "./home/Hero";
 
 export default function Home() {
   return (
     <>
-      <HomeMain></HomeMain>
+      <Hero></Hero>
       <div
         id="about-section"
         className="flex flex-col flex-grow gap-4 p-10 min-h items-center "
