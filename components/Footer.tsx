@@ -6,18 +6,26 @@ import { MdOutlineMailOutline } from "react-icons/md";
 const Footer = () => {
   return (
     <div className="flex flex-row justify-evenly">
-      <Link href="https://www.linkedin.com/in/rafael-diaz1/">
+      <a
+        href="https://www.linkedin.com/in/rafael-diaz1/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <div className="flex flex-col items-center">
           <CiLinkedin className="text-black text-4xl" />
           <span className="text-black text-lg">LinkedIn</span>
         </div>
-      </Link>
-      <Link href="https://github.com/availe">
+      </a>
+      <a
+        href="https://github.com/availe"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <div className="flex flex-col items-center">
           <FiGithub className="text-black text-4xl" />
           <span className="text-black text-lg">GitHub</span>
         </div>
-      </Link>
+      </a>
       <Link href="/contact">
         <div className="flex flex-col items-center">
           <MdOutlineMailOutline className="text-black text-4xl" />

@@ -25,7 +25,8 @@ export default function About() {
         <p className="border-t border-gray-300 pt-6">
           Note that this website is a work in progress.
         </p>
-        <p>You can check out the code for this website <Link href="https://github.com/availe/availe.io" passHref className='underline'>here.</Link></p>
+        <p>You can check out the code for this website {' '}
+          <a href="https://github.com/availe/availe.io" target="_blank" rel="noopener noreferrer" className='underline'>here</a></p>
       </div>
     </div>
   );
