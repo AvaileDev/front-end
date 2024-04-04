@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function About() {
   return (
     <div className="min-h-screen-minus-footer mx-auto px-10 max-w-xl flex flex-col gap-5">
@@ -17,13 +19,13 @@ export default function About() {
           <li>Front-end: React, Typescript, Tailwind</li>
           <li>Back-end: NextJS</li>
           <li>CI/CD: Jenkins, Docker</li>
-          <li>Hosting: EC2 AWS</li>
+          <li>Hosting: EC2 AWS with AlmaLinux</li>
         </ul>
 
         <p className="border-t border-gray-300 pt-6">
-          Note that this website is a work in progress. I&apos;m currently
-          focusing on remastering projects in a web-deployable format.
+          Note that this website is a work in progress.
         </p>
+        <p>You can check out the code for this website <Link href="https://github.com/availe/availe.io" passHref className='underline'>here.</Link></p>
       </div>
     </div>
   );
