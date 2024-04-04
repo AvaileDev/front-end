@@ -70,7 +70,29 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-padding-top: 3.5rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+.min-h-screen-minus-footer {
+  min-height: calc(100vh - 10.5rem);
 }
