@@ -97,7 +97,7 @@ const HomeMain = () => {
                 style={{ objectFit: "contain" }}
               />
               <span className="text-center text-white mt-8">
-                Expense Tracker, built with JavaFX and SQLite
+                Placeholder, app not yet web-deployable
               </span>
             </div>
           </Link>
