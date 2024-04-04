@@ -1,0 +1,58 @@
+{
+    "Languages": [
+        {
+            "name": "Python",
+            "icon": "TbBrandPython"
+        },
+        {
+            "name": "C++",
+            "icon": "SiCplusplus"
+        },
+        {
+            "name": "Java",
+            "icon": "FaJava"
+        },
+        {
+            "name": "TypeScript",
+            "icon": "TbBrandTypescript"
+        }
+    ],
+    "Frontend": [
+        {
+            "name": "React",
+            "icon": "FaReact"
+        },
+        {
+            "name": "Next.js",
+            "icon": "TbBrandNextjs"
+        }
+    ],
+    "Infrastructure": [
+        {
+            "name": "AWS",
+            "icon": "FaAws"
+        },
+        {
+            "name": "Linux",
+            "icon": "CiServer"
+        },
+        {
+            "name": "Docker",
+            "icon": "FaDocker"
+        }
+    ],
+    "DevTools": [
+        {
+            "name": "Jenkins",
+            "icon": "GoGear"
+        },
+        {
+            "name": "SQL",
+            "icon": "PiFileSqlLight"
+        },
+        {
+            "name": "Wireshark",
+            "icon": "SiWireshark"
+        }
+    ]
+}
