@@ -51,7 +51,7 @@ const HeroTabs = () => {
                     <div className="grid grid-cols-4 gap-4 mt-8">
                         {iconsList.map((tech, index) => (
                             <div key={index} className="flex flex-col items-center">
-                                <tech.Icon className="text-white text-4xl" />
+                                <tech.Icon className="text-white text-3xl" />
                                 <span className="text-white text-lg">{tech.name}</span>
                             </div>
                         ))}
