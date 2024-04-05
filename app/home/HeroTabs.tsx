@@ -42,7 +42,7 @@ const HeroTabs = () => {
         <Tabs defaultValue="Languages" className="w-full max-w-md mx-auto">
             <TabsList aria-label="Manage your settings">
                 {Object.keys(iconMap).map((category) => (
-                    <TabsTrigger key={category} value={category}>{category}</TabsTrigger>
+                    <TabsTrigger key={category} value={category} className="text-indigo-100 border-indigo-100 data-[state=active]:border-white data-[state=active]:text-white">{category}</TabsTrigger>
                 ))}
             </TabsList>
 
