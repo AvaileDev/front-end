@@ -5,7 +5,7 @@ export default function Contact() {
 
   return (
     <div className="w-full">
-      <form className="flex flex-col gap-6 w-3/5 mx-auto">
+      <form className="flex flex-col gap-6 w-2/5 mx-auto">
         <h2 className="text-lg text-center">Contact Form</h2>
         <label htmlFor="Email" className={labelClass}>
           Email

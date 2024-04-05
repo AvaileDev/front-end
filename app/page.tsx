@@ -20,6 +20,7 @@ export default function Home() {
             other areas of computer science.
           </p>
           <p>Below are select projects that I have worked on:</p>
+          <p className="text-3xl">Placeholder for now</p>
         </div>
       </div>
     </>
