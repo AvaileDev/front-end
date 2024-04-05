@@ -39,27 +39,26 @@ const iconMap = {
 
 const HeroTabs = () => {
     return (
-        <Tabs defaultValue="languages" className="w-full max-w-md mx-auto">
+        <Tabs defaultValue="Languages" className="w-full max-w-md mx-auto">
             <TabsList aria-label="Manage your settings">
-                <TabsTrigger value="languages">Languages</TabsTrigger>
-                <TabsTrigger value="frontend">Frontend</TabsTrigger>
-                <TabsTrigger value="infrastructure">Infrastructure</TabsTrigger>
-                <TabsTrigger value="devtools">Development Tools</TabsTrigger>
+                {Object.keys(iconMap).map((category) => (
+                    <TabsTrigger key={category} value={category}>{category}</TabsTrigger>
+                ))}
             </TabsList>
-            <TabsContent value="languages">
-                <p>Languages</p>
-            </TabsContent>
-            <TabsContent value="frontend">
-                <p>Frontend</p>
-            </TabsContent>
-            <TabsContent value="infrastructure">
-                <p>Infrastructure</p>
-            </TabsContent>
-            <TabsContent value="devtools">
-                <p>Development Tools</p>
-            </TabsContent>
-        </Tabs>
 
+            {Object.entries(iconMap).map(([category, iconsList]) => (
+                <TabsContent key={category} value={category}>
+                    <div className="grid grid-cols-4 gap-4 mt-8">
+                        {iconsList.map((tech, index) => (
+                            <div key={index} className="flex flex-col items-center">
+                                <tech.Icon className="text-white text-4xl" />
+                                <span className="text-white text-lg">{tech.name}</span>
+                            </div>
+                        ))}
+                    </div>
+                </TabsContent>
+            ))}
+        </Tabs>
     )
 }
 
