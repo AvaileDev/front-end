@@ -11,27 +11,31 @@ import {
 } from "react-icons/tb";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
-const technologies_dict = [
-    // Programming Languages
-    { name: "Python", Icon: TbBrandPython },
-    { name: "C++", Icon: SiCplusplus },
-    { name: "Java", Icon: FaJava },
-    { name: "TypeScript", Icon: TbBrandTypescript },
+const iconMap = {
+    Languages: [
+        { name: "Python", Icon: TbBrandPython },
+        { name: "C++", Icon: SiCplusplus },
+        { name: "Java", Icon: FaJava },
+        { name: "TypeScript", Icon: TbBrandTypescript },
+    ],
 
-    // Frontend Technologies
-    { name: "React", Icon: FaReact },
-    { name: "Next.js", Icon: TbBrandNextjs },
+    Frontend: [
+        { name: "React", Icon: FaReact },
+        { name: "Next.js", Icon: TbBrandNextjs },
+    ],
 
-    // Backend and Infrastructure
-    { name: "AWS", Icon: FaAws },
-    { name: "Linux", Icon: CiServer },
-    { name: "Docker", Icon: FaDocker },
+    Infrastructure: [
+        { name: "AWS", Icon: FaAws },
+        { name: "Linux", Icon: CiServer },
+        { name: "Docker", Icon: FaDocker },
+    ],
 
-    // Development Tools and Databases
-    { name: "Jenkins", Icon: GoGear },
-    { name: "SQL", Icon: PiFileSqlLight },
-    { name: "Wireshark", Icon: SiWireshark },
-];
+    DevTools: [
+        { name: "Jenkins", Icon: GoGear },
+        { name: "SQL", Icon: PiFileSqlLight },
+        { name: "Wireshark", Icon: SiWireshark },
+    ]
+};
 
 const HeroTabs = () => {
     return (
