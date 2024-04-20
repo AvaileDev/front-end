@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/client": "^5.12.1",
     "@radix-ui/react-tabs": "^1.0.4",
     "aws-sdk": "^2.1594.0",
     "class-variance-authority": "^0.7.0",
@@ -32,6 +33,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.1.4",
     "postcss": "^8",
+    "prisma": "^5.12.1",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }
