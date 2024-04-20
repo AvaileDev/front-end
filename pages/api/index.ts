@@ -1,6 +1,21 @@
-import aws from 'aws-sdk';
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { prisma } from '../../lib/prisma';
+import aws from 'aws-sdk';
 
-export default function emailHandler(req: NextApiRequest, res: NextApiResponse) {
-    res.status(200).json({ message: 'Email sent successfully' });
+const ses = new aws.SES({
+    region: process.env.AWS_REGION,
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+});
+
+export default async function emailHandler(req: NextApiRequest, res: NextApiResponse) {
+    if (req.method === 'POST') {
+        const { email, subject, content } = req.body;
+        try {
+
+        }
+        catch {
+
+        }
+    }
 }
