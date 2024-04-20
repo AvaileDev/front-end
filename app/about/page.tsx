@@ -17,9 +17,12 @@ export default function About() {
         <p>For this website, I used the following tech stack:</p>
         <ul className="list-disc list-inside text-gray-700 text-lg">
           <li>Front-end: React, Typescript, Tailwind</li>
-          <li>Back-end: NextJS</li>
+          <li>Frameworks: NextJS</li>
+          <li>Back-end: Postgres</li>
+          <li>ORM: Prisma</li>
           <li>CI/CD: Jenkins, Docker</li>
           <li>Hosting: EC2 AWS with AlmaLinux</li>
+          <li>Email: Amazon SES</li>
         </ul>
 
         <p className="border-t border-gray-300 pt-6">
