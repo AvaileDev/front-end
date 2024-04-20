@@ -22,7 +22,7 @@ const HomeMain = () => {
         </div>
         <div className="flex-col flex-grow w-2/5 p-10 hidden md:flex">
           <h1 className="text-white text-2xl text-center mb-5">
-            Featured Project
+            Placeholder Project
           </h1>
           <Link href="/about" passHref>
             <div className="flex flex-col justify-center transition duration-300 ease-in-out transform hover:scale-105">
