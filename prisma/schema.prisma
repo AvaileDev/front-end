@@ -12,3 +12,26 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id Int @id @default(autoincrement())
+  email String @unique
+  firstName String
+  lastName String
+  messages Message[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  messageCount Int @default(0)
+  spamWarningCount Int @default(0)
+}
+
+model Message {
+  id Int @id @default(autoincrement())
+  subject String
+  content String
+  userId Int // foreign key
+  user User @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now())
+  readAt DateTime?
+  spamLikely Boolean @default(false)
+}
