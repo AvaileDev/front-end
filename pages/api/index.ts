@@ -12,41 +12,59 @@ const ses = new aws.SES({
 });
 
 export default async function emailHandler(req: NextApiRequest, res: NextApiResponse) {
-    if (req.method === 'POST') {
-        const { email, subject, content } = req.body; // destructure data from request body
+    // quit if contact form submission is not a POST request -- should never happen
+    if (req.method != 'POST') {
+        res.setHeader('Allow', ['POST']);
+        res.status(405).end(`Method ${req.method} Not Allowed. Please use POST.`);
+        return;
+    }
 
-        // create a new entry in the postgres database
-        const dataEntry = await prisma.contactFormSubmission.create({
-            data: {
-                email,
-                subject,
-                content
-            }
-        })
+    // quit if email address is not provided in .env file -- can't send email without it
+    if (!process.env.EMAIL_FROM) {
+        res.status(500).json({ message: 'Server is not configured correctly.' });
+        return;
+    }
 
-        // send a verification email
-        const params = {
-            Source: process.env.EMAIL_FROM,
-            Destination: {
-                ToAddresses: [email]
+    // destructure data from request body
+    const { email, subject, content } = req.body;
+
+    if (!email || !subject || !content) {
+        res.status(400).json({ message: 'Missing required fields' });
+        return;
+    }
+
+    // create a new entry in the postgres database
+    const dataEntry = await prisma.contactFormSubmission.create({
+        data: {
+            email,
+            subject,
+            content
+        }
+    })
+
+    // send a verification email
+    const params = {
+        Source: process.env.EMAIL_FROM,
+        Destination: {
+            ToAddresses: [email]
+        },
+        Message: {
+            Subject: {
+                Data: subjectTxt
             },
-            Message: {
-                Subject: {
-                    Data: subjectTxt
-                },
-                Body: {
-                    Text: {
-                        Data: bodyTxt
-                    }
+            Body: {
+                Text: {
+                    Data: bodyTxt
                 }
             }
         }
+    }
 
-        try {
-
-        }
-        catch {
-
-        }
+    try {
+        await ses.sendEmail(params).promise();
+        res.status(200).json({ message: 'Email sent successfully.' });
+    }
+    catch (error) {
+        res.status(500).json({ message: 'Error occured while sending confirmation email.', error: error });
     }
 }
