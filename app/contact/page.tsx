@@ -10,7 +10,6 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setLoading(true)
 
     const form = e.currentTarget;
     const formData = new FormData(form);
@@ -26,6 +25,7 @@ export default function Contact() {
     }
 
     try {
+      setLoading(true)
       const res = await fetch("/api/email", {
         method: "POST",
         headers: {

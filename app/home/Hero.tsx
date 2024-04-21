@@ -29,8 +29,8 @@ const HomeMain = () => {
               <Image
                 src="/render.webp"
                 alt="Vercel Logo"
-                width="3"
-                height="2"
+                width="572"
+                height="272"
                 layout="responsive"
                 style={{ objectFit: "contain" }}
               />
