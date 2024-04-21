@@ -52,7 +52,7 @@ export default function Contact() {
     <div className="w-full">
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col gap-6 w-2/5 mx-auto">
+        className="flex flex-col gap-6 w-4/5 md:w-3/5 lg:2/5 mx-auto">
         <h2 className="text-2xl font-semibold text-center">Contact Form</h2>
         <label htmlFor="Email" className={labelClass}>
           Email
