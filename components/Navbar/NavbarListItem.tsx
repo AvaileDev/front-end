@@ -15,7 +15,7 @@ const NavbarListItem = ({
   isActive,
   onItemClick,
 }: NavbarListItemProps) => {
-  const itemClass = `text-xl ${isActive && isMobileMenu ? "font-semibold" : ""}`
+  const itemClass = `text-xl ${isActive && isMobileMenu ? "font-semibold" : ""} ${isMobileMenu ? "" : " ml-10 hover:border-b text-xl"}`
 
   return (
     <li className={itemClass} onClick={onItemClick}>
