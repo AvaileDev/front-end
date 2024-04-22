@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import NavbarListItem from "./NavbarListItem";
-import Logo from "@/public/vercel.svg";
+import Logo from "@/public/logo.svg";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useEffect, useRef, useState } from "react";
 import { usePathname, useRouter } from 'next/navigation';
@@ -49,7 +49,10 @@ const Navbar = () => {
 
         {/* Logo */}
         <Link href="/">
-          <Image src={Logo} alt="Logo" width={205} height={75} />
+          <div className="flex flex-row justify-center items-center gap-3">
+            <Image src={Logo} alt="Logo" height={45} />
+            <h1 className="text-3xl">Availe</h1>
+          </div>
         </Link>
 
         {/* Desktop navbar */}

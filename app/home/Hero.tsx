@@ -7,7 +7,7 @@ import HeroTabs from "./HeroTabs";
 
 const HomeMain = () => {
   return (
-    <div className="flex flex-col justify-evenly flex-col bg-indigo-400 -mt-10 md:mt-0 md:min-h-screen">
+    <div className="flex flex-col justify-evenly flex-col bg-indigo-400 -mt-8 md:mt-0 md:min-h-screen">
       <div className="flex flex-row">
         <div className="flex flex-col w-3/5 justify-evenly flex-grow text-center items-center gap-10 xsm:gap-12 mt-12 mb-12 md:mt-0 md:mb-0">
           <h1 className="font-medium text-white">
