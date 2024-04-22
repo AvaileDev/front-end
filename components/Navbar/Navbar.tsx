@@ -72,7 +72,7 @@ const Navbar = () => {
         </div>
         <ul className="flex flex-col gap-y-4 py-4">
           {nav_dict.map(({ href, text }, index) => (
-            <NavbarListItem key={index} href={href} text={text} isActive={pathname === href} onItemClick={handleNav} />
+            <NavbarListItem key={index} href={href} text={text} isActive={pathname === href} onItemClick={handleNav} isMobileMenu={true} />
           ))}
         </ul>
         <div className="mb-4">

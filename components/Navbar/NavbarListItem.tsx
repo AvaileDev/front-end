@@ -15,15 +15,14 @@ const NavbarListItem = ({
   isActive,
   onItemClick,
 }: NavbarListItemProps) => {
-  const itemClass = `${isActive ? (isMobileMenu ? "font-semibold " : "") : ""}${isMobileMenu ? "ml-0 text-xl underline" : "ml-10 hover:border-b text-xl"}`;
-
+  const itemClass = `text-xl ${isActive && isMobileMenu ? "font-semibold" : ""}`
 
   return (
-    <Link href={href}>
-      <li className={itemClass} onClick={onItemClick}>
+    <li className={itemClass} onClick={onItemClick}>
+      <Link href={href}>
         {text}
-      </li>
-    </Link>
+      </Link>
+    </li>
   );
 };
 
