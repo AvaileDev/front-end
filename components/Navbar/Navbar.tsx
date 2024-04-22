@@ -70,7 +70,7 @@ const Navbar = () => {
         <div className={closeIconClasses} onClick={handleNav}>
           {isNavOpen ? <AiOutlineClose size={25} /> : null}
         </div>
-        <ul className="flex flex-col gap-y-4 py-4">
+        <ul className="flex flex-col gap-y-6 py-4">
           {nav_dict.map(({ href, text }, index) => (
             <NavbarListItem key={index} href={href} text={text} isActive={pathname === href} onItemClick={handleNav} isMobileMenu={true} />
           ))}

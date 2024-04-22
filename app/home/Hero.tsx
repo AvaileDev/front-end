@@ -32,7 +32,6 @@ const HomeMain = () => {
                 alt="Vercel Logo"
                 width="572"
                 height="272"
-                layout="responsive"
                 style={{ objectFit: "contain" }}
               />
               <span className="text-center text-white mt-8">
