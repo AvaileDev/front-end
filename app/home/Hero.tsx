@@ -51,13 +51,3 @@ const HomeMain = () => {
 };
 
 export default HomeMain;
-
-
-{/* <div className="grid grid-cols-4 gap-0 md:gap-4">
-            {technologies_dict.map((tech, index) => (
-              <div key={index} className="flex flex-col items-center">
-                <tech.Icon className="text-white text-4xl" />
-                <span className="text-white text-lg">{tech.name}</span>
-              </div>
-            ))}
-          </div> */}

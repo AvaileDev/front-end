@@ -7,6 +7,7 @@ import Logo from "@/public/vercel.svg";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useEffect, useRef, useState } from "react";
 import { usePathname, useRouter } from 'next/navigation';
+import Footer from "@/components/Footer";
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -30,7 +31,7 @@ const Navbar = () => {
   }, []);
 
   const menuClasses = `fixed right-0 top-0 w-[65%] sm:hidden h-screen bg-[#ecf0f3] p-10 
-                         transform ${isNavOpen ? "-translate-x-0" : "translate-x-full"} 
+                        flex flex-col justify-between transform ${isNavOpen ? "-translate-x-0" : "translate-x-full"} 
                          transition-transform duration-500 ease-in-out`;
   const closeIconClasses = `absolute top-6 right-4 transition-opacity duration-0 ease-in-out ${isNavOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`;
 
@@ -74,8 +75,11 @@ const Navbar = () => {
             <NavbarListItem key={index} href={href} text={text} isActive={pathname === href} onItemClick={handleNav} />
           ))}
         </ul>
+        <div className="mb-4">
+          <Footer showText={false} />
+        </div>
       </div>
-    </nav>
+    </nav >
   );
 };
 

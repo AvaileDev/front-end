@@ -3,7 +3,9 @@ import { CiLinkedin } from "react-icons/ci";
 import { FiGithub } from "react-icons/fi";
 import { MdOutlineMailOutline } from "react-icons/md";
 
-const Footer = () => {
+const Footer = ({ showText = true }) => {
+  const txtStyle = "text-black text-lg" + (showText ? "" : " hidden");
+
   return (
     <div className="flex flex-row justify-evenly">
       <a
@@ -13,7 +15,7 @@ const Footer = () => {
       >
         <div className="flex flex-col items-center">
           <CiLinkedin className="text-black text-4xl" />
-          <span className="text-black text-lg">LinkedIn</span>
+          <span className={txtStyle}>LinkedIn</span>
         </div>
       </a>
       <a
@@ -23,13 +25,13 @@ const Footer = () => {
       >
         <div className="flex flex-col items-center">
           <FiGithub className="text-black text-4xl" />
-          <span className="text-black text-lg">GitHub</span>
+          <span className={txtStyle}>GitHub</span>
         </div>
       </a>
       <Link href="/contact">
         <div className="flex flex-col items-center">
           <MdOutlineMailOutline className="text-black text-4xl" />
-          <span className="text-black text-lg">Email</span>
+          <span className={txtStyle}>Email</span>
         </div>
       </Link>
     </div>
