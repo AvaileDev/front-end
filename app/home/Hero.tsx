@@ -7,18 +7,17 @@ import HeroTabs from "./HeroTabs";
 
 const HomeMain = () => {
   return (
-    <div className="flex flex-col justify-start md:justify-evenly flex-col bg-indigo-400 -mt-10 md:mt-0 md:min-h-screen">
-      <div className="flex flex-row">
-        <div className="flex flex-col w-3/5 justify-evenly flex-grow text-center items-center gap-12 min-h-dvh md:min-h-0">
-          <div className="flex flex-col">
+    <div className="flex flex-col justify-evenly flex-col bg-indigo-400 -mt-10 md:mt-0 min-h-dvh md:min-h-screen">
+      <div className="flex flex-row -mt-10">
+        <div className="flex flex-col w-3/5 justify-evenly flex-grow text-center items-center gap-12">
+          <div className="flex flex-col justify-evenly gap-12 w-full items-center">
             <h1 className="font-medium text-white">
               <span className="text-2xl">Hello, I&apos;m</span> <br />
               <span className="text-6xl">Rafael Diaz</span> <br />
               <span className="text-3xl">a software developer</span>
             </h1>
+            <HeroTabs></HeroTabs>
           </div>
-
-          <HeroTabs></HeroTabs>
 
           <FiChevronDown
             className="text-white text-4xl self-center md:hidden"
