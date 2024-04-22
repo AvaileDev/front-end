@@ -1,14 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { prisma } from '../../../lib/prisma';
-import aws from 'aws-sdk';
+import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses';
+import { fromEnv } from '@aws-sdk/credential-provider-env';
 
 const subjectTxt = "Contact form confirmation for availe.io"
 const bodyTxt = "This email contains the information you submitted to the contact form on availe.io. If you did not submit this information, please disregard this email. Thank you for your interest in availe.io."
 
-const ses = new aws.SES({
+const sesClient = new SESClient({
     region: process.env.AWS_REGION,
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+    credentials: fromEnv(),
 });
 
 export default async function emailHandler(req: NextApiRequest, res: NextApiResponse) {
@@ -60,8 +60,9 @@ export default async function emailHandler(req: NextApiRequest, res: NextApiResp
         }
     }
 
+    const sendEmailCommand = new SendEmailCommand(params);
     try {
-        await ses.sendEmail(params).promise();
+        await sesClient.send(sendEmailCommand);
         res.status(200).json({ message: 'Email sent successfully.' });
     }
     catch (error) {
