@@ -76,11 +76,6 @@
   }
 }
 
-html,
-body {
-  overflow-x: hidden;
-}
-
 .min-h-screen-minus-footer {
   min-height: calc(100vh - 10.5rem);
 }
