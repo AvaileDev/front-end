@@ -4,6 +4,7 @@ interface NavbarListItemProps {
   href: string;
   text: string;
   isMobileMenu?: boolean;
+  isActive: boolean;
   onItemClick?: () => void;
 }
 
@@ -11,11 +12,11 @@ const NavbarListItem = ({
   href,
   text,
   isMobileMenu,
+  isActive,
   onItemClick,
 }: NavbarListItemProps) => {
-  const itemClass = isMobileMenu
-    ? "ml-0 text-xl"
-    : "ml-10 hover:border-b text-xl";
+  const itemClass = `${isActive ? (isMobileMenu ? "font-semibold " : "") : ""}${isMobileMenu ? "ml-0 text-xl underline" : "ml-10 hover:border-b text-xl"}`;
+
 
   return (
     <Link href={href}>

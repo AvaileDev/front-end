@@ -6,10 +6,13 @@ import NavbarListItem from "./NavbarListItem";
 import Logo from "@/public/vercel.svg";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useEffect, useRef, useState } from "react";
+import { usePathname, useRouter } from 'next/navigation';
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const handleNav = () => setIsNavOpen(!isNavOpen);
+  const router = useRouter();
+  const pathname = usePathname();
 
   const menuClasses = `fixed right-0 top-0 w-[65%] sm:hidden h-screen bg-[#ecf0f3] p-10 
                          transform ${isNavOpen ? "-translate-x-0" : "translate-x-full"} 
@@ -33,7 +36,7 @@ const Navbar = () => {
         <div>
           <ul className="hidden sm:flex mr-1">
             {nav_dict.map(({ href, text }, index) => (
-              <NavbarListItem key={index} href={href} text={text} />
+              <NavbarListItem key={index} href={href} text={text} isActive={pathname === href} />
             ))}
           </ul>
         </div>
@@ -47,7 +50,7 @@ const Navbar = () => {
         </div>
         <ul className="flex flex-col gap-y-4 py-4">
           {nav_dict.map(({ href, text }, index) => (
-            <NavbarListItem key={index} href={href} text={text} />
+            <NavbarListItem key={index} href={href} text={text} isActive={pathname === href} />
           ))}
         </ul>
       </div>
