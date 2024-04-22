@@ -7,10 +7,10 @@ import HeroTabs from "./HeroTabs";
 
 const HomeMain = () => {
   return (
-    <div className="flex justify-evenly flex-col min-h-screen bg-indigo-400">
+    <div className="flex flex-col justify-start md:justify-evenly flex-col bg-indigo-400 -mt-10 md:mt-0 md:min-h-screen">
       <div className="flex flex-row">
-        <div className="flex flex-col w-3/5 justify-center flex-grow text-center items-center gap-12">
-          <div className="">
+        <div className="flex flex-col w-3/5 justify-evenly flex-grow text-center items-center gap-12 min-h-dvh md:min-h-0">
+          <div className="flex flex-col">
             <h1 className="font-medium text-white">
               <span className="text-2xl">Hello, I&apos;m</span> <br />
               <span className="text-6xl">Rafael Diaz</span> <br />
@@ -19,6 +19,11 @@ const HomeMain = () => {
           </div>
 
           <HeroTabs></HeroTabs>
+
+          <FiChevronDown
+            className="text-white text-4xl self-center md:hidden"
+            onClick={() => scrollToSection("about-section")}
+          />
         </div>
         <div className="flex-col flex-grow w-2/5 p-10 hidden md:flex">
           <h1 className="text-white text-2xl text-center mb-5">
@@ -42,7 +47,7 @@ const HomeMain = () => {
         </div>
       </div>
       <FiChevronDown
-        className="text-white text-4xl self-center"
+        className="text-white text-4xl self-center hidden md:block"
         onClick={() => scrollToSection("about-section")}
       />
     </div>
