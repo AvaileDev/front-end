@@ -70,7 +70,7 @@ const HeroTabs = () => {
         {/* accordion component (mobile) */}
         <Accordion type="single" collapsible className="md:hidden w-2/3 text-white">
             {Object.entries(iconMap).map(([category, iconsList]) => (
-                <AccordionItem key={category} value={category}>
+                <AccordionItem key={category} value={category} className="my-4 xsm:my-6">
                     <AccordionTrigger>{category.replace(/([A-Z])/g, ' $1').trim()}</AccordionTrigger>
                     <AccordionContent>
                         <div className="grid grid-cols-2 gap-4">
