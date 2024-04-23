@@ -20,7 +20,7 @@ export default function About() {
           <li>Frameworks: NextJS</li>
           <li>Database: Postgres</li>
           <li>ORM: Prisma</li>
-          <li>CI/CD: Jenkins, Docker</li>
+          <li>CI/CD: GitHub Actions, Docker</li>
           <li>Hosting: EC2 AWS with AlmaLinux</li>
           <li>Email: Amazon SES</li>
         </ul>

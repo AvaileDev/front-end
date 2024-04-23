@@ -27,7 +27,6 @@ const iconMap = {
         { name: "AWS", Icon: FaAws },
         { name: "Linux", Icon: CiServer },
         { name: "Docker", Icon: FaDocker },
-        { name: "Jenkins", Icon: GoGear },
         { name: "Postgres", Icon: SiPostgresql },
         { name: "Prisma", Icon: TbBrandPrisma }
     ],
