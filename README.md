@@ -15,9 +15,10 @@ To run the production server:
 
 ```bash
 npx eslint --fix .
-npm run dev
 npm run build
 npm start
 ```
+
+Note ```npx eslint --fix .``` is only necessary if npm run build fails to transpile.  
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
