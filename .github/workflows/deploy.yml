@@ -41,7 +41,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.PORT }}
         source: "availe.tar.gz"
-        target: "/host/availe/"
+        target: "${{ secrets.TARGET_PATH }}"
 
     - name: Deploy Docker image on EC2
       uses: appleboy/ssh-action@v0.1.7
@@ -51,5 +51,5 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.PORT }}
         script: |
-          docker load < /host/availe/availe.tar.gz
+          docker load < ${{ secrets.TARGET_PATH }}/availe.tar.gz
           docker run -d -p 3000:3000 availe:latest
