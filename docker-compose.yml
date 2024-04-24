@@ -9,7 +9,7 @@ services:
   nginx:
     image: nginx:latest
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
+      - /home/ec2-user/host/availe/nginx.conf:/etc/nginx/nginx.conf
       - /etc/ssl/certs/OriginPrivateKey.pem:/etc/ssl/certs/OriginPrivateKey.pem
       - /etc/ssl/certs/OriginCertificate.pem:/etc/ssl/certs/OriginCertificate.pem
     ports:
