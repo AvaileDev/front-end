@@ -71,6 +71,7 @@ jobs:
         script: |
           cd ${{ secrets.TARGET_PATH }}
           docker-compose down
+          docker ps -q --filter "publish=3000" | xargs -r docker stop
           docker rmi availe:latest || true
           docker load < availe.tar.gz
           docker-compose up -d
