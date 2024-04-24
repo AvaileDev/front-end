@@ -3,7 +3,6 @@ services:
     image: availe:latest
     depends_on:
       - db
-      - nginx
     environment:
       DATABASE_URL: ${DATABASE_URL}
     ports:
