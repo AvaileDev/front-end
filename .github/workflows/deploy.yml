@@ -34,14 +34,14 @@ jobs:
       run: |
         docker save availe:latest | gzip > availe.tar.gz
 
-    - name: Upload Docker image to EC2
+    - name: Upload Docker images to EC2
       uses: appleboy/scp-action@v0.1.7
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.PORT }}
-        source: "availe.tar.gz"
+        source: "availe.tar.gz, docker-compose.yml"
         target: "${{ secrets.TARGET_PATH }}"
 
     - name: Deploy Docker image on EC2
@@ -52,5 +52,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.PORT }}
         script: |
+          cd ${{ secrets.TARGET_PATH }}
           docker load < ${{ secrets.TARGET_PATH }}/availe.tar.gz
-          docker run -d -p 3000:3000 availe:latest
+          docker-compose down
+          docker-compose up -d
