@@ -53,6 +53,6 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           cd ${{ secrets.TARGET_PATH }}
-          docker load < ${{ secrets.TARGET_PATH }}/availe.tar.gz
+          docker load < availe.tar.gz
           docker-compose down
           docker-compose up -d
