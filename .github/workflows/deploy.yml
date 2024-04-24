@@ -44,6 +44,23 @@ jobs:
         source: "availe.tar.gz, docker-compose.yml"
         target: "${{ secrets.TARGET_PATH }}"
 
+    - name: Generate .env file
+      run: |
+        echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" > .env
+        echo "POSTGRES_USER=${{ secrets.POSTGRES_USER }}" >> .env
+        echo "POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }}" >> .env
+        echo "POSTGRES_DB=${{ secrets.POSTGRES_DB }}" >> .env
+
+    - name: Upload .env file to EC2
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: ${{ secrets.PORT }}
+        source: ".env"
+        target: "${{ secrets.TARGET_PATH }}"
+
     - name: Deploy Docker image on EC2
       uses: appleboy/ssh-action@v0.1.7
       with:
