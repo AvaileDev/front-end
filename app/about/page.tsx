@@ -18,7 +18,7 @@ export default function About() {
         <ul className="list-disc list-inside text-gray-700 text-lg">
           <li>Front-end: React, Typescript, Tailwind</li>
           <li>Frameworks: NextJS</li>
-          <li>Database: Postgres</li>
+          <li>Back-end: Postgres, Nginx</li>
           <li>ORM: Prisma</li>
           <li>CI/CD: GitHub Actions, Docker</li>
           <li>Hosting: EC2 AWS with AlmaLinux</li>
