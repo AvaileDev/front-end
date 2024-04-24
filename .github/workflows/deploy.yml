@@ -28,6 +28,7 @@ jobs:
         file: ./Dockerfile
         load: true
         tags: availe:latest
+        platforms: linux/arm64/v8
 
     - name: Save Docker image
       run: |
