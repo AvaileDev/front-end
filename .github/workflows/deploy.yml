@@ -70,6 +70,7 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           cd ${{ secrets.TARGET_PATH }}
-          docker load < availe.tar.gz
           docker-compose down
+          docker rmi availe:latest || true
+          docker load < availe.tar.gz
           docker-compose up -d
