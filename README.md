@@ -1,6 +1,6 @@
 ## Getting Started
 
-Website Link: [https://availe.io](availe.io)
+Website Link: [availe.io](https://availe.io)
 
 To download file dependencies:
 ```bash
