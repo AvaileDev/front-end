@@ -38,7 +38,7 @@ const Navbar = () => {
   const nav_dict = [
     { href: "/", text: "Home" },
     { href: "/about", text: "About" },
-    // { href: "/game", text: "Game Dev" },
+    { href: "/game", text: "Game (WIP)" },
     // { href: "/data", text: "Data Science" },
     { href: "/contact", text: "Contact" },
   ];
