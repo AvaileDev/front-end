@@ -7,7 +7,7 @@ To download file dependencies:
 npm install
 ```
 
-To run the development local server:
+To run the development local server (cannot run html5 games):
 
 ```bash
 npm run dev
