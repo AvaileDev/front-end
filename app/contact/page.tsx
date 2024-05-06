@@ -38,6 +38,9 @@ export default function Contact() {
         form.reset();
         alert("Email sent successfully.");
       }
+      else {
+        alert("Error occured while sending email.");
+      }
     }
     catch {
       alert("Error occured while sending email.");
