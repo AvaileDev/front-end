@@ -7,13 +7,19 @@ To download file dependencies:
 npm install
 ```
 
-To run the development server:
+To run the development local server (cannot run html5 games):
 
 ```bash
 npm run dev
 ```
 
-To run the production server:
+To run the game-test local server (slower but with cross-origin headers):
+
+```bash
+npm run devg
+```
+
+To run the production local server:
 
 ```bash
 npx eslint --fix .
