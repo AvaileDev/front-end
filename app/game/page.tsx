@@ -5,6 +5,8 @@ const GameIframe = memo(() => (
   <iframe src="Export-Web/game.html" className="w-full h-full border-none" />
 ));
 
+GameIframe.displayName = 'GameIframe';
+
 const DynamicGameIframe = dynamic(() => Promise.resolve(GameIframe), {
   ssr: false,
 });
