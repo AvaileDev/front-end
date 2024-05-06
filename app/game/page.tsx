@@ -14,7 +14,7 @@ const DynamicGameIframe = dynamic(() => Promise.resolve(GameIframe), {
 export default function GameDev() {
   return (
     <>
-      <div className='sticky top-11 w-full bg-white z-10'>
+      <div className='sticky top-11 w-full bg-white'>
         <p>Game in progress: no win/loss condition or mobile support yet. Use WASD to move, W to jump, and S for quick descent. Hold shift to mega-jump if on ground.</p>
       </div>
       <div className="flex flex-col h-screen">
